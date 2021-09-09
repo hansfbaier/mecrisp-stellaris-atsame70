@@ -1,0 +1,1 @@
+{"buildTargets":["all","clean","mecrisp-stellaris-atsame70n19.bin","mecrisp-stellaris-atsame70n19.hex","mecrisp-stellaris-atsame70n19.o"],"launchTargets":["/home/jack/forth/mecrisp-stellaris-2.5.9a/mecrisp-stellaris-source/atsame70-ra>mecrisp-stellaris-atsame70n19.elf()"],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

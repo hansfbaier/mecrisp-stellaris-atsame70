@@ -1,0 +1,430 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Fri Sep 10 05:35:10 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+PAPERSIZE = letter
+# environment
+DESKTOP_SESSION = i3
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 7)
+TARGET = atsame70n19
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = i3
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/jack/forth/mecrisp-stellaris-2.5.9a/mecrisp-stellaris-source/atsame70-ra
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/73
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-i3:/etc/xdg
+# environment
+QSYS_ROOTDIR = /opt/intelFPGA_lite/20.1/quartus/sopc_builder/bin
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+USERNAME = jack
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/i3.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/i3:/home/jack/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+CLUTTER_IM_MODULE = ibus
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a09d0063-d47c-4991-a77a-c23f943df2d4.sock
+# environment
+LC_NAME = id_ID.UTF-8
+# environment
+VSCODE_CWD = /home/jack
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/73/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/jack/.cargo/bin:/home/jack/.poetry/bin:/home/jack/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-10-oracle/bin:/usr/lib/jvm/java-10-oracle/db/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/jack/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# makefile (from 'Makefile', line 8)
+PROJECT = mecrisp-stellaris-$(TARGET)
+# environment
+SNAP = /snap/code/73
+# environment
+SNAP_VERSION = e7d7e9a9
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=562dca52-a54f-491d-955a-55c3a33aef91&iid=562dca52-a54f-491d-955a-55c3a33aef91&sid=562dca52-a54f-491d-955a-55c3a33aef91","uploadToServer":true}
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/73/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_SESSION_DESKTOP = i3
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-uPywK5eudJ2l/agent.4374
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# makefile (from 'Makefile', line 2)
+ARMGNU = arm-none-eabi
+# environment
+NIX_SSL_CERT_FILE = /etc/ssl/certs/ca-certificates.crt
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/jack/forth/mecrisp-stellaris-2.5.9a/mecrisp-stellaris-source/atsame70-ra
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 4486
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = i3
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/jack
+# environment
+J2REDIR = /usr/lib/jvm/java-10-oracle
+# environment
+GHDL_PREFIX = /usr/share/ghdl/lib/ghdl
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/jack/.config/Code/CachedData/e7d7e9a9348e6a8cc8c03f877d39cb72e5dfb1ff
+# environment
+LOGNAME = jack
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = ZM2SzXJv8L6r0uyJrGcbVk78TaMrzVmg9Alm29op3gLsnwn_MYOD
+# automatic
++F = $(notdir $+)
+# environment
+J2SDKDIR = /usr/lib/jvm/java-10-oracle
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/jack/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.2.1
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 2
+# environment
+LC_TIME = id_ID.UTF-8
+# environment
+SNAP_REAL_HOME = /home/jack
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# environment
+SNAP_USER_DATA = /home/jack/snap/code/73
+# environment
+SHLVL = 1
+# environment
+NIX_PATH = /home/jack/.nix-defexpr/channels
+# environment
+NIX_PROFILES = /nix/var/nix/profiles/default /home/jack/.nix-profile
+# environment
+JAVA_HOME = /usr/lib/jvm/java-10-oracle
+# environment
+XDG_SESSION_ID = 2
+# environment
+USER = jack
+# environment
+SNAP_REVISION = 73
+# environment
+LC_MONETARY = id_ID.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = i3
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = id_ID.UTF-8
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.4374
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/jack
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 5)
+AOPS = --warn --fatal-warnings
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-597df7a9-1.60.0-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/jack/.config/Code/exthost Crash Reports
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = id_ID.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'Makefile', line 4)
+COPS = -Wall  -Og -nostdlib -nostartfiles -ffreestanding -save-temps
+# environment
+DEFAULTS_PATH = /usr/share/gconf/i3.default.path
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = ZM2SzXJv8L6r0uyJrGcbVk78TaMrzVmg9Alm29op3gLsnwn_MYOD
+# environment
+LC_NUMERIC = id_ID.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LC_MEASUREMENT = id_ID.UTF-8
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+QT4_IM_MODULE = ibus
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = id_ID.UTF-8
+# environment
+DERBY_HOME = /usr/lib/jvm/java-10-oracle/db
+# default
+.RECIPEPREFIX := 
+# environment
+ 
+LC_ADDRESS = id_ID.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 5287
+# variable set hash-table stats:
+# Load=140/1024=14%, Rehash=0, Collisions=22/182=12%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64768, inode 38931878): 19 files, no impossibilities.
+
+# 19 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+all: mecrisp-stellaris-atsame70n19.bin mecrisp-stellaris-atsame70n19.hex
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+flash.s:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-09 03:46:21.511954899
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+terminal.s:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-09 13:32:40.141357068
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-06 16:39:31.367507746
+#  File has been updated.
+#  Successfully updated.
+
+mecrisp-stellaris-atsame70n19.o: flash.s interrupts.s mecrisp-stellaris-atsame70n19.s terminal.s vectors.s
+#  Implicit rule search has not been done.
+#  Last modified 2021-09-09 13:32:42.597215081
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 13):
+	$(ARMGNU)-as -g $(PROJECT).s -o $(PROJECT).o
+
+mecrisp-stellaris-atsame70n19.hex: mecrisp-stellaris-atsame70n19.bin
+#  Implicit rule search has not been done.
+#  Last modified 2021-09-09 13:32:42.76520542
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 18):
+	$(ARMGNU)-objcopy -I binary -O ihex $(PROJECT).bin $(PROJECT).hex
+
+mecrisp-stellaris-atsame70n19.bin: memmap mecrisp-stellaris-atsame70n19.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-09-09 13:32:42.62921324
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 21):
+	$(ARMGNU)-ld -g -o $(PROJECT).elf -T memmap $(PROJECT).o
+	$(ARMGNU)-objdump -D $(PROJECT).elf > $(PROJECT).list
+	$(ARMGNU)-objcopy $(PROJECT).elf $(PROJECT).bin -O binary
+	$(ARMGNU)-objdump --source --all-headers --demangle --line-numbers --wide $(PROJECT).elf > $(PROJECT).lst
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 27):
+	rm -f *.bin
+	rm -f *.o
+	rm -f *.elf
+	rm -f *.list
+	rm -f *.lst
+	rm -f *.hex
+
+# Not a target:
+mecrisp-stellaris-atsame70n19.s:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-09 03:23:13.482075494
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+vectors.s:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-09 02:26:50.137758324
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+memmap:
+#  Implicit rule search has been done.
+#  Last modified 2021-09-09 03:42:18.154074518
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+interrupts.s:
+#  Implicit rule search has been done.
+#  Last modified 2016-12-16 18:03:46
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=14/1024=1%, Rehash=0, Collisions=0/37=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 25 / storage = 412 B / avg = 16 B
+# current buf: size = 8162 B / used = 412 B / count = 25 / avg = 16 B
+
+# strcache performance: lookups = 48 / hit rate = 47%
+# hash-table stats:
+# Load=25/8192=0%, Rehash=0, Collisions=1/48=2%
+# Finished Make data base on Fri Sep 10 05:35:10 2021
+
+ 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ATSAME70N19 svdcutter template.xml creator for Mecrisp-Stellaris Forth by Matthias Koch -->
+<!--By Terry Porter "terry@tjporter.com.au"-->
+<!-- NOTE: Mecrisp Stellaris enables IO PORTS A-E by default, for all other peripherals Register RCC is required-->
+
+
+<peripherals>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">ACC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">AES</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">AFEC0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">AFEC1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">CHIPID</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">DACC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">EFC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">GMAC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">GPBR</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">HSMCI</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">ICM</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">ISI</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">MATRIX</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">MCAN0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">MCAN1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PIOA</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PIOB</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PIOD</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PMC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PWM0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">PWM1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">QSPI</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">RSTC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">RSWDT</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">RTC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">RTT</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SPI0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SSC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SUPC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TC0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TC1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TC2</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TC3</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TRNG</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TWIHS0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TWIHS1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">TWIHS2</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UART0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UART1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UART2</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UART3</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UART4</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">USART0</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">USART1</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">USART2</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">USBHS</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">UTMI</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">WDT</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">XDMAC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">LOCKBIT</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SCnSCB</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SCB</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">SysTick</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">NVIC</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">MPU</name>
+  <name xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">FPU</name>
+</peripherals>  
+
