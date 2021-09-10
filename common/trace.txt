@@ -18,7 +18,7 @@ false variable trace-state
     dictionarynext
   until
   drop
-  rdrop 
+  rdrop
 ;
 
 0 variable closest-found
@@ -34,7 +34,7 @@ false variable trace-state
     if \ Is the address of this entry BEFORE the address which is to be found ?
       \ Distance to current   Latest best distance
       r@ over -               r@ closest-found @ -  <
-      if dup closest-found ! then \ Is the current entry closer to the address which is to be found ?              
+      if dup closest-found ! then \ Is the current entry closer to the address which is to be found ?
     then
     dictionarynext
   until
@@ -72,15 +72,15 @@ false variable trace-state
 \ Redefine entry and exit points
 
 : trace-entry-does ( -- ) trace-state @ if 1 trace-depth +!
-                          ."    --> ( " base @ decimal trace-depth @ . base ! ." ) " 
+                          ."    --> ( " base @ decimal trace-depth @ . base ! ." ) "
                           dup does-name. ." --does-> " r@ traceinside. .s then ;
 
-: trace-entry      ( -- ) trace-state @ if 1 trace-depth +! 
-                          ."    --> ( " base @ decimal trace-depth @ . base ! ." ) " 
+: trace-entry      ( -- ) trace-state @ if 1 trace-depth +!
+                          ."    --> ( " base @ decimal trace-depth @ . base ! ." ) "
                           r@ 6 - tracename. .s then ;
 
-: trace-exit       ( -- ) trace-state @ if                  
-                          ."    <-- ( " base @ decimal trace-depth @ . base ! ." ) " 
+: trace-exit       ( -- ) trace-state @ if
+                          ."    <-- ( " base @ decimal trace-depth @ . base ! ." ) "
                           -1 trace-depth +! .s then ;
 
 : does>
@@ -100,7 +100,7 @@ immediate ;
 immediate [ ret, smudge
 
 : : ( -- )
-  :      
+  :
   postpone trace-entry
 [ ret, smudge
 

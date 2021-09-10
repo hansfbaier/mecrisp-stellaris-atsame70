@@ -131,9 +131,9 @@ ramallot Eingabepuffer, Maximaleeingabe  @ Eingabepuffer wird einen Adresse-Län
 
   ramallot returnstackende, 256  @ Return stack
   ramallot returnstackanfang, 0
-  
+
 .endif
-  
+
 .ifdef emulated16bitflashwrites
   .equ Sammelstellen, 32 @ 32 * 6 = 192 Bytes.
   ramallot Sammeltabelle, Sammelstellen * 6 @ 16-Bit Flash write emulation collection buffer
@@ -212,7 +212,7 @@ CoreDictionaryAnfang: @ Dictionary-Einsprungpunkt setzen
   .ltorg
   .include "../common/compiler.s"
   .include "../common/compiler-flash.s"
-  .ltorg 
+  .ltorg
   .include "../common/ra/controlstructures.s"
   .ltorg
   .include "../common/ra/doloop.s"

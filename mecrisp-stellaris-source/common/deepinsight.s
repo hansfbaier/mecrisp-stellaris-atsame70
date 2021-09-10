@@ -23,7 +23,7 @@
   Wortbirne Flag_visible, "hex." @ Print an unsigned number in Base 16, independent of number subsystem.
 hexdot: @ ( u -- ) @ Funktioniert unabhängig vom restlichen Zahlensystem.
 @ -----------------------------------------------------------------------------
-  
+
         push    {r0, r1, r2, lr}
         popda r1 @ Zahl holen
         movs    r0, #32 @ Zahl der Bits, die noch zu bearbeiten sind  Number of Bits left
@@ -51,7 +51,7 @@ hexdot: @ ( u -- ) @ Funktioniert unabhängig vom restlichen Zahlensystem.
         pop     {r0, r1, r2, pc}
 
 @ -----------------------------------------------------------------------------
-  Wortbirne Flag_visible, "h.s"  @ Prints out data stack, uses unsigned hexadecimal snumbers. 
+  Wortbirne Flag_visible, "h.s"  @ Prints out data stack, uses unsigned hexadecimal snumbers.
 hexdots: @ Malt den Stackinhalt, diesmal verschönert !
 @ -----------------------------------------------------------------------------
         push {r0, r1, r2, r3, r4, lr}
@@ -59,7 +59,7 @@ hexdots: @ Malt den Stackinhalt, diesmal verschönert !
         b.n 1f
 
 @ -----------------------------------------------------------------------------
-  Wortbirne Flag_visible, "u.s"  @ Prints out data stack, uses unsigned numbers. 
+  Wortbirne Flag_visible, "u.s"  @ Prints out data stack, uses unsigned numbers.
 udots: @ Malt den Stackinhalt, diesmal verschönert !
 @ -----------------------------------------------------------------------------
         push {r0, r1, r2, r3, r4, lr}
@@ -67,7 +67,7 @@ udots: @ Malt den Stackinhalt, diesmal verschönert !
         b.n 1f
 
 @ -----------------------------------------------------------------------------
-  Wortbirne Flag_visible, ".s"  @ Prints out data stack, uses signed numbers. 
+  Wortbirne Flag_visible, ".s"  @ Prints out data stack, uses signed numbers.
 dots: @ Malt den Stackinhalt, diesmal verschönert !
 @ -----------------------------------------------------------------------------
   push {r0, r1, r2, r3, r4, lr}
@@ -178,11 +178,11 @@ dump:  @ Malt den Speicherinhalt beginnend ab der angegebenen Adresse
 
   writeln ""
   pop {pc}
-  
+
 @ -----------------------------------------------------------------------------
   Wortbirne Flag_visible, ".regs" @ ( -- ) Prints register contents
 dotregs:
-@ -----------------------------------------------------------------------------  
+@ -----------------------------------------------------------------------------
   push {r0, r1, r2, r3, r4, r5, r6, r7, lr}
 
   pushdatos
@@ -191,26 +191,26 @@ dotregs:
   bl hexdot
 
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
-  push {r0, r1, r2, r3, r4, r5, r6, r7}  
-  
+  push {r0, r1, r2, r3, r4, r5, r6, r7}
+
   pushda r0
   write "r0: "
   bl hexdot
-  
+
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
   push {r0, r1, r2, r3, r4, r5, r6, r7}
-  
+
   pushda r1
   write "r1: "
   bl hexdot
 
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
   push {r0, r1, r2, r3, r4, r5, r6, r7}
-  
+
   pushda r2
-  write "r2: "  
+  write "r2: "
   bl hexdot
-  
+
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
   push {r0, r1, r2, r3, r4, r5, r6, r7}
 
@@ -219,43 +219,43 @@ dotregs:
   bl hexdot
 
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
-  push {r0, r1, r2, r3, r4, r5, r6, r7}  
-  
+  push {r0, r1, r2, r3, r4, r5, r6, r7}
+
   pushda r4
-  write "r4: "  
+  write "r4: "
   bl hexdot
-  
+
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
-  push {r0, r1, r2, r3, r4, r5, r6, r7}  
+  push {r0, r1, r2, r3, r4, r5, r6, r7}
 
   pushda r5
   write "r5: "
   bl hexdot
-  
+
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
-  push {r0, r1, r2, r3, r4, r5, r6, r7}  
-  
+  push {r0, r1, r2, r3, r4, r5, r6, r7}
+
   pushda r6
-  write "r6: "  
+  write "r6: "
   bl hexdot
-  
+
   pop  {r0, r1, r2, r3, r4, r5, r6, r7}
-  push {r0, r1, r2, r3, r4, r5, r6, r7}  
-  
+  push {r0, r1, r2, r3, r4, r5, r6, r7}
+
   pushda r7
-  write "r7: "  
+  write "r7: "
   bl hexdot
 
 
   pushdatos
   mov tos, sp
   write "sp: "
-  bl hexdot  
-  
+  bl hexdot
+
   writeln "*>"
-  
+
   pop {r0, r1, r2, r3, r4, r5, r6, r7, pc}
-  
+
   .endif
 
 
@@ -323,9 +323,9 @@ unused:
 .else
   bhs.n unused_ram
 .endif
-    
+
     ldr tos, =FlashDictionaryEnde
 
-unused_ram:  
+unused_ram:
   subs tos, r1
   pop {pc}
