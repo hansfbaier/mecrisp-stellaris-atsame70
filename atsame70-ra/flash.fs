@@ -46,15 +46,15 @@ FLASH_BASE $8000 + constant USER_FLASH_BASE
 : flash-status
     EFC-EEFC_FSR @
     cr
-    ." Flash status:" cr
-    dup 1  0 lshift and 0<> if ." flash ready " else ." flash busy" cr then
-    dup 1  1 lshift and 0<> if ." invalid command " cr then
-    dup 1  2 lshift and 0<> if ." write attempt on locked region " cr then
-    dup 1  3 lshift and 0<> if ." EraseVerify/WriteVerify failed " cr then
-    dup 1 16 lshift and 0<> if ." one error detected and corrected on 64 LSB" cr then
-    dup 1 17 lshift and 0<> if ." multiple errors detected and *not* corrected on 64 LSB" cr then
-    dup 1 18 lshift and 0<> if ." one error detected and corrected on 64 MSB" cr then
-    dup 1 19 lshift and 0<> if ." multiple errors detected and *not* corrected on 64 MSB" cr then
+    ." Flash status: " cr
+    dup 1  0 lshift and 0<> if ."    * ready " else ." busy" cr then
+    dup 1  1 lshift and 0<> if ."    * invalid command " cr then
+    dup 1  2 lshift and 0<> if ."    * write attempt on locked region " cr then
+    dup 1  3 lshift and 0<> if ."    * EraseVerify/WriteVerify failed " cr then
+    dup 1 16 lshift and 0<> if ."    * one error detected and corrected on 64 LSB" cr then
+    dup 1 17 lshift and 0<> if ."    * multiple errors detected and *not* corrected on 64 LSB" cr then
+    dup 1 18 lshift and 0<> if ."    * one error detected and corrected on 64 MSB" cr then
+    dup 1 19 lshift and 0<> if ."    * multiple errors detected and *not* corrected on 64 MSB" cr then
     cr
     drop
 ;
