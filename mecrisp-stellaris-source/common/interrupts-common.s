@@ -56,14 +56,76 @@ nop_vektor:
   Wortbirne Flag_visible, "unhandled" @ Message for wild interrupts
 unhandled:                            @   and handler for unused interrupts
 @ -----------------------------------------------------------------------------
-  push {lr}
-  @ writeln "Unhandled Interrupt !"
+  tst lr, #4 @ which stack was active?
+  ite eq
+  mrseq r0, msp
+  mrsne r0, psp
+
   write "Unhandled Interrupt "
   pushdatos
   mrs tos, ipsr
   bl hexdot
   writeln "!"
-  pop {pc}
+  writeln "Registers before the fault:"
+
+  ldr r1, [r0]
+  write "r0:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #4]
+  write "r1:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #8]
+  write "r2:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #12]
+  write "r3:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #16]
+  write "r12: "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #20]
+  write "lr:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #24]
+  write "pc:  "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  ldr r1, [r0, #28]
+  write "psr: "
+  mov tos, r1
+  bl hexdot
+  writeln ""
+
+  drop
+
+1:
+  b 1b
+
+@------------------------------------------------------------------------------
+  Wortbirne Flag_visible, "breakpoint" @ ( -- )
+breakpoint:
+@------------------------------------------------------------------------------
+  bkpt 1
 
 @ -----------------------------------------------------------------------------
   Wortbirne Flag_visible, "reset" @ ( -- ) Hardware level reset
