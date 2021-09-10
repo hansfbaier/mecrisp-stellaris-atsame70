@@ -2,7 +2,7 @@
 USER_FLASH_BASE constant ufb
 FLASH_BASE      constant fb
 
-$8000 constant offset
+$10000 constant offset
 flash_base offset + constant foo
 : crashme
     foo erase-page
@@ -23,4 +23,3 @@ flash_base offset + constant foo
     begin again
 ;
 
-' diag-fault irq-fault !
