@@ -1,0 +1,7 @@
+probes:
+  0001A0000000:
+    target_override:  atsame70n19
+    test_binary:      mecrisp-stellaris-atsame70n19.bin
+
+pack:
+  - /opt/cmsis-packs/Atmel.SAME70_DFP.2.4.166.atpack
