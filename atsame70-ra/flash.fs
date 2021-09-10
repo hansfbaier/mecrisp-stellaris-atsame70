@@ -116,7 +116,7 @@ FLASH_BASE $8000 + constant USER_FLASH_BASE
 ;
 
 : get-flash-descriptor ( -- descriptor )
-    EFC-CMD-GET_FLASH_DESCRIPTOR 0 write-command
+    0 EFC-CMD-GET_FLASH_DESCRIPTOR write-command
     EFC-EEFC_FRR @
     EFC-EEFC_FRR @
     EFC-EEFC_FRR @
