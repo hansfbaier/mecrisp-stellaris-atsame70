@@ -1,5 +1,4 @@
 .vscode/**
-.gdbinit
 .vscode
 *.bin
 *.elf

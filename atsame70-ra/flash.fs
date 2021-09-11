@@ -12,6 +12,8 @@
     1 =
 ;
 
+0 variable debug
+
 \ flash commands
 $5A000000 constant EFC-CMD-GET_FLASH_DESCRIPTOR
 $5A000001 constant EFC-CMD-WRITE_PAGE
@@ -80,39 +82,57 @@ FLASH_BASE $8000 + constant USER_FLASH_BASE
     swap                        ( command param )
     8 lshift                    ( command param )
     or                          ( command+param )
-    cr ." write command: " dup hex.
+    debug @ if cr ." write command: " dup hex. then
     wait-flash-ready
     EFC-EEFC_FCR !               ( -- )
     wait-flash-ready
-    flash-status
+    debug @ if flash-status then
 ;
 
 : write-page ( addr -- )
     page-of-address        ( page )
-    cr ." about to write page: " dup hex. cr
+    debug @ if cr ." about to write page: " dup hex. cr then
     EFC-CMD-WRITE_PAGE     ( page cmd )
     write-command
 ;
 
 : lock-page ( addr -- )
     page-of-address        ( page )
-    cr ." about to lock page: " dup hex. cr
+    debug @ if cr ." about to lock page: " dup hex. cr then
     EFC-CMD-SET_LOCK_BIT   ( page cmd )
     write-command
 ;
 
 : unlock-page ( addr -- )
     page-of-address        ( page      )
-    cr ." about to unlock page: " dup hex. cr
+    debug @ if cr ." about to unlock page: " dup hex. cr then
     EFC-CMD-CLEAR_LOCK_BIT ( page cmd )
     write-command
 ;
 
-: erase-page ( addr -- )
+: erase-16-pages ( addr -- )
     page-of-address        ( page      )
     2 or
     EFC-CMD-ERASE_PAGES    ( page cmd )
     write-command
+;
+
+: flash-fill-16-pages ( addr value -- )
+    over
+    erase-16-pages
+    0                 ( addr value pagecount )
+    begin
+        2 pick        ( addr value pagecount addr )
+        over $200 * + ( addr value pagecount pageaddr )
+        dup
+        3 pick        ( addr value pagecount pageaddr pageaddr value )
+        $80 swap      ( addr value pagecount pageaddr pageaddr $80 value )
+        memfill       ( addr value pagecount pageaddr )
+        write-page
+        1+ dup
+    $10 = until
+    2drop
+    drop
 ;
 
 : get-flash-descriptor ( -- descriptor )
@@ -158,7 +178,7 @@ FLASH_BASE $8000 + constant USER_FLASH_BASE
     FLASH_BASE
     begin
         dup                        ( addr addr )
-        ." lock addr: " dup hex.
+        debug @ if ." lock addr: " dup hex. then
         wait-flash-ready
         lock-page
         $200 +
@@ -171,7 +191,7 @@ FLASH_BASE $8000 + constant USER_FLASH_BASE
     FLASH_BASE
     begin
         dup                        ( addr addr )
-        ." unlock addr: " dup hex.
+        debug @ if ." unlock addr: " dup hex. then
         wait-flash-ready
         unlock-page
         $200 +
