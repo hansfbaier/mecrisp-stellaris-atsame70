@@ -1,7 +1,6 @@
 : compiletoflash compiletoram ;
 
 #include pretty.fs
-#include 1b.fs
 #include eefc.fs
 #include scb.fs
 #include util.fs
