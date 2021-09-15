@@ -3218,13 +3218,13 @@ USBHS $0014 + constant USBHS-DEVIDR ( Device Global Interrupt Disable Register )
 USBHS $0018 + constant USBHS-DEVIER ( Device Global Interrupt Enable Register )
 USBHS $001C + constant USBHS-DEVEPT ( Device Endpoint Register )
 USBHS $0020 + constant USBHS-DEVFNUM ( Device Frame Number Register )
-USBHS $100 + constant USBHS-DEVEPTCFG[%s] ( Device Endpoint Configuration Register n = 0 0 )
-USBHS $130 + constant USBHS-DEVEPTISR[%s] ( Device Endpoint Status Register n = 0 0 )
-USBHS $160 + constant USBHS-DEVEPTICR[%s] ( Device Endpoint Clear Register n = 0 0 )
-USBHS $190 + constant USBHS-DEVEPTIFR[%s] ( Device Endpoint Set Register n = 0 0 )
-USBHS $1C0 + constant USBHS-DEVEPTIMR[%s] ( Device Endpoint Mask Register n = 0 0 )
-USBHS $1F0 + constant USBHS-DEVEPTIER[%s] ( Device Endpoint Enable Register n = 0 0 )
-USBHS $220 + constant USBHS-DEVEPTIDR[%s] ( Device Endpoint Disable Register n = 0 0 )
+USBHS $100 + constant USBHS-DEVEPTCFG-BASE ( Device Endpoint Configuration Register n )
+USBHS $130 + constant USBHS-DEVEPTISR-BASE ( Device Endpoint Status Register n )
+USBHS $160 + constant USBHS-DEVEPTICR-BASE ( Device Endpoint Clear Register n )
+USBHS $190 + constant USBHS-DEVEPTIFR-BASE ( Device Endpoint Set Register n )
+USBHS $1C0 + constant USBHS-DEVEPTIMR-BASE ( Device Endpoint Mask Register n )
+USBHS $1F0 + constant USBHS-DEVEPTIER-BASE ( Device Endpoint Enable Register n )
+USBHS $220 + constant USBHS-DEVEPTIDR-BASE ( Device Endpoint Disable Register n )
 USBHS $0400 + constant USBHS-HSTCTRL ( Host General Control Register )
 USBHS $0404 + constant USBHS-HSTISR ( Host Global Interrupt Status Register )
 USBHS $0408 + constant USBHS-HSTICR ( Host Global Interrupt Clear Register )
@@ -3237,15 +3237,15 @@ USBHS $0420 + constant USBHS-HSTFNUM ( Host Frame Number Register )
 USBHS $0424 + constant USBHS-HSTADDR1 ( Host Address 1 Register )
 USBHS $0428 + constant USBHS-HSTADDR2 ( Host Address 2 Register )
 USBHS $042C + constant USBHS-HSTADDR3 ( Host Address 3 Register )
-USBHS $500 + constant USBHS-HSTPIPCFG[%s] ( Host Pipe Configuration Register n = 0 0 )
-USBHS $530 + constant USBHS-HSTPIPISR[%s] ( Host Pipe Status Register n = 0 0 )
-USBHS $560 + constant USBHS-HSTPIPICR[%s] ( Host Pipe Clear Register n = 0 0 )
-USBHS $590 + constant USBHS-HSTPIPIFR[%s] ( Host Pipe Set Register n = 0 0 )
-USBHS $5C0 + constant USBHS-HSTPIPIMR[%s] ( Host Pipe Mask Register n = 0 0 )
-USBHS $5F0 + constant USBHS-HSTPIPIER[%s] ( Host Pipe Enable Register n = 0 0 )
-USBHS $620 + constant USBHS-HSTPIPIDR[%s] ( Host Pipe Disable Register n = 0 0 )
-USBHS $650 + constant USBHS-HSTPIPINRQ[%s] ( Host Pipe IN Request Register n = 0 0 )
-USBHS $680 + constant USBHS-HSTPIPERR[%s] ( Host Pipe Error Register n = 0 0 )
+USBHS $500 + constant USBHS-HSTPIPCFG-BASE ( Host Pipe Configuration Register n )
+USBHS $530 + constant USBHS-HSTPIPISR-BASE ( Host Pipe Status Register n )
+USBHS $560 + constant USBHS-HSTPIPICR-BASE ( Host Pipe Clear Register n )
+USBHS $590 + constant USBHS-HSTPIPIFR-BASE ( Host Pipe Set Register n )
+USBHS $5C0 + constant USBHS-HSTPIPIMR-BASE ( Host Pipe Mask Register n )
+USBHS $5F0 + constant USBHS-HSTPIPIER-BASE ( Host Pipe Enable Register n )
+USBHS $620 + constant USBHS-HSTPIPIDR-BASE ( Host Pipe Disable Register n )
+USBHS $650 + constant USBHS-HSTPIPINRQ-BASE ( Host Pipe IN Request Register n )
+USBHS $680 + constant USBHS-HSTPIPERR-BASE ( Host Pipe Error Register n )
 USBHS $0800 + constant USBHS-CTRL ( General Control Register )
 USBHS $0804 + constant USBHS-SR ( General Status Register )
 USBHS $0808 + constant USBHS-SCR ( General Status Clear Register )
@@ -3259,13 +3259,13 @@ USBHS $080C + constant USBHS-SFR ( General Status Set Register )
 : USBHS-DEVIER. ." USBHS-DEVIER (write-only) $" USBHS-DEVIER @ hex. USBHS-DEVIER 1b. ;
 : USBHS-DEVEPT. ." USBHS-DEVEPT () $" USBHS-DEVEPT @ hex. USBHS-DEVEPT 1b. ;
 : USBHS-DEVFNUM. ." USBHS-DEVFNUM (read-only) $" USBHS-DEVFNUM @ hex. USBHS-DEVFNUM 1b. ;
-: USBHS-DEVEPTCFG[%s]. ." USBHS-DEVEPTCFG[%s] () $" USBHS-DEVEPTCFG[%s] @ hex. USBHS-DEVEPTCFG[%s] 1b. ;
-: USBHS-DEVEPTISR[%s]. ." USBHS-DEVEPTISR[%s] (read-only) $" USBHS-DEVEPTISR[%s] @ hex. USBHS-DEVEPTISR[%s] 1b. ;
-: USBHS-DEVEPTICR[%s]. ." USBHS-DEVEPTICR[%s] (write-only) $" USBHS-DEVEPTICR[%s] @ hex. USBHS-DEVEPTICR[%s] 1b. ;
-: USBHS-DEVEPTIFR[%s]. ." USBHS-DEVEPTIFR[%s] (write-only) $" USBHS-DEVEPTIFR[%s] @ hex. USBHS-DEVEPTIFR[%s] 1b. ;
-: USBHS-DEVEPTIMR[%s]. ." USBHS-DEVEPTIMR[%s] (read-only) $" USBHS-DEVEPTIMR[%s] @ hex. USBHS-DEVEPTIMR[%s] 1b. ;
-: USBHS-DEVEPTIER[%s]. ." USBHS-DEVEPTIER[%s] (write-only) $" USBHS-DEVEPTIER[%s] @ hex. USBHS-DEVEPTIER[%s] 1b. ;
-: USBHS-DEVEPTIDR[%s]. ." USBHS-DEVEPTIDR[%s] (write-only) $" USBHS-DEVEPTIDR[%s] @ hex. USBHS-DEVEPTIDR[%s] 1b. ;
+: USBHS-DEVEPTCFGx. ( x -- ) dup ." USBHS-DEVEPTCFG" . ." () $"           $4 * USBHS-DEVEPTCFG-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTISRx. ( x -- ) dup ." USBHS-DEVEPTISR" . ." (read-only) $"  $4 * USBHS-DEVEPTISR-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTICRx. ( x -- ) dup ." USBHS-DEVEPTICR" . ." (write-only) $" $4 * USBHS-DEVEPTICR-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTIFRx. ( x -- ) dup ." USBHS-DEVEPTIFR" . ." (write-only) $" $4 * USBHS-DEVEPTIFR-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTIMRx. ( x -- ) dup ." USBHS-DEVEPTIMR" . ." (read-only) $"  $4 * USBHS-DEVEPTIMR-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTIERx. ( x -- ) dup ." USBHS-DEVEPTIER" . ." (write-only) $" $4 * USBHS-DEVEPTIER-BASE + dup @ hex. 1b. ;
+: USBHS-DEVEPTIDRx. ( x -- ) dup ." USBHS-DEVEPTIDR" . ." (write-only) $" $4 * USBHS-DEVEPTIDR-BASE + dup @ hex. 1b. ;
 : USBHS-HSTCTRL. ." USBHS-HSTCTRL () $" USBHS-HSTCTRL @ hex. USBHS-HSTCTRL 1b. ;
 : USBHS-HSTISR. ." USBHS-HSTISR (read-only) $" USBHS-HSTISR @ hex. USBHS-HSTISR 1b. ;
 : USBHS-HSTICR. ." USBHS-HSTICR (write-only) $" USBHS-HSTICR @ hex. USBHS-HSTICR 1b. ;
@@ -3278,15 +3278,15 @@ USBHS $080C + constant USBHS-SFR ( General Status Set Register )
 : USBHS-HSTADDR1. ." USBHS-HSTADDR1 () $" USBHS-HSTADDR1 @ hex. USBHS-HSTADDR1 1b. ;
 : USBHS-HSTADDR2. ." USBHS-HSTADDR2 () $" USBHS-HSTADDR2 @ hex. USBHS-HSTADDR2 1b. ;
 : USBHS-HSTADDR3. ." USBHS-HSTADDR3 () $" USBHS-HSTADDR3 @ hex. USBHS-HSTADDR3 1b. ;
-: USBHS-HSTPIPCFG[%s]. ." USBHS-HSTPIPCFG[%s] () $" USBHS-HSTPIPCFG[%s] @ hex. USBHS-HSTPIPCFG[%s] 1b. ;
-: USBHS-HSTPIPISR[%s]. ." USBHS-HSTPIPISR[%s] (read-only) $" USBHS-HSTPIPISR[%s] @ hex. USBHS-HSTPIPISR[%s] 1b. ;
-: USBHS-HSTPIPICR[%s]. ." USBHS-HSTPIPICR[%s] (write-only) $" USBHS-HSTPIPICR[%s] @ hex. USBHS-HSTPIPICR[%s] 1b. ;
-: USBHS-HSTPIPIFR[%s]. ." USBHS-HSTPIPIFR[%s] (write-only) $" USBHS-HSTPIPIFR[%s] @ hex. USBHS-HSTPIPIFR[%s] 1b. ;
-: USBHS-HSTPIPIMR[%s]. ." USBHS-HSTPIPIMR[%s] (read-only) $" USBHS-HSTPIPIMR[%s] @ hex. USBHS-HSTPIPIMR[%s] 1b. ;
-: USBHS-HSTPIPIER[%s]. ." USBHS-HSTPIPIER[%s] (write-only) $" USBHS-HSTPIPIER[%s] @ hex. USBHS-HSTPIPIER[%s] 1b. ;
-: USBHS-HSTPIPIDR[%s]. ." USBHS-HSTPIPIDR[%s] (write-only) $" USBHS-HSTPIPIDR[%s] @ hex. USBHS-HSTPIPIDR[%s] 1b. ;
-: USBHS-HSTPIPINRQ[%s]. ." USBHS-HSTPIPINRQ[%s] () $" USBHS-HSTPIPINRQ[%s] @ hex. USBHS-HSTPIPINRQ[%s] 1b. ;
-: USBHS-HSTPIPERR[%s]. ." USBHS-HSTPIPERR[%s] () $" USBHS-HSTPIPERR[%s] @ hex. USBHS-HSTPIPERR[%s] 1b. ;
+: USBHS-HSTPIPCFGx.  ( x -- ) dup ." USBHS-HSTPIPCFG"  . ." () $"           $4 * USBHS-HSTPIPCFG-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPISRx.  ( x -- ) dup ." USBHS-HSTPIPISR"  . ." (read-only) $"  $4 * USBHS-HSTPIPISR-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPICRx.  ( x -- ) dup ." USBHS-HSTPIPICR"  . ." (write-only) $" $4 * USBHS-HSTPIPICR-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPIFRx.  ( x -- ) dup ." USBHS-HSTPIPIFR"  . ." (write-only) $" $4 * USBHS-HSTPIPIFR-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPIMRx.  ( x -- ) dup ." USBHS-HSTPIPIMR"  . ." (read-only) $"  $4 * USBHS-HSTPIPIMR-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPIERx.  ( x -- ) dup ." USBHS-HSTPIPIER"  . ." (write-only) $" $4 * USBHS-HSTPIPIER-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPIDRx.  ( x -- ) dup ." USBHS-HSTPIPIDR"  . ." (write-only) $" $4 * USBHS-HSTPIPIDR-BASE  + dup @ hex. 1b. ;
+: USBHS-HSTPIPINRQx. ( x -- ) dup ." USBHS-HSTPIPINRQ" . ." () $"           $4 * USBHS-HSTPIPINRQ-BASE + dup @ hex. 1b. ;
+: USBHS-HSTPIPERRx.  ( x -- ) dup ." USBHS-HSTPIPERR"  . ." () $"           $4 * USBHS-HSTPIPERR-BASE  + dup @ hex. 1b. ;
 : USBHS-CTRL. ." USBHS-CTRL () $" USBHS-CTRL @ hex. USBHS-CTRL 1b. ;
 : USBHS-SR. ." USBHS-SR (read-only) $" USBHS-SR @ hex. USBHS-SR 1b. ;
 : USBHS-SCR. ." USBHS-SCR (write-only) $" USBHS-SCR @ hex. USBHS-SCR 1b. ;
@@ -3301,13 +3301,13 @@ USBHS-DEVIDR.
 USBHS-DEVIER.
 USBHS-DEVEPT.
 USBHS-DEVFNUM.
-USBHS-DEVEPTCFG[%s].
-USBHS-DEVEPTISR[%s].
-USBHS-DEVEPTICR[%s].
-USBHS-DEVEPTIFR[%s].
-USBHS-DEVEPTIMR[%s].
-USBHS-DEVEPTIER[%s].
-USBHS-DEVEPTIDR[%s].
+USBHS-DEVEPTCFG-BASE.
+USBHS-DEVEPTISR-BASE.
+USBHS-DEVEPTICR-BASE.
+USBHS-DEVEPTIFR-BASE.
+USBHS-DEVEPTIMR-BASE.
+USBHS-DEVEPTIER-BASE.
+USBHS-DEVEPTIDR-BASE.
 USBHS-HSTCTRL.
 USBHS-HSTISR.
 USBHS-HSTICR.
@@ -3320,15 +3320,15 @@ USBHS-HSTFNUM.
 USBHS-HSTADDR1.
 USBHS-HSTADDR2.
 USBHS-HSTADDR3.
-USBHS-HSTPIPCFG[%s].
-USBHS-HSTPIPISR[%s].
-USBHS-HSTPIPICR[%s].
-USBHS-HSTPIPIFR[%s].
-USBHS-HSTPIPIMR[%s].
-USBHS-HSTPIPIER[%s].
-USBHS-HSTPIPIDR[%s].
-USBHS-HSTPIPINRQ[%s].
-USBHS-HSTPIPERR[%s].
+USBHS-HSTPIPCFG-BASE.
+USBHS-HSTPIPISR-BASE.
+USBHS-HSTPIPICR-BASE.
+USBHS-HSTPIPIFR-BASE.
+USBHS-HSTPIPIMR-BASE.
+USBHS-HSTPIPIER-BASE.
+USBHS-HSTPIPIDR-BASE.
+USBHS-HSTPIPINRQ-BASE.
+USBHS-HSTPIPERR-BASE.
 USBHS-CTRL.
 USBHS-SR.
 USBHS-SCR.
