@@ -60,13 +60,7 @@
    2drop
 ;
 
-: cls ( -- )
-  65
-  begin
-  cr
-  1- dup
-  0= until
-;
+: cls $1b emit ." [2J" $1b emit ." [H" ;
 
 : clear-stack begin . depth 0= until ;
 
